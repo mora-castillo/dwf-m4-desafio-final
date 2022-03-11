@@ -19,7 +19,7 @@ body {
 @media (min-width: 960px) {
   .contact {
     flex-direction: row;
-    padding: 250px 40px;
+    padding: 150px 40px;
     gap: 150px;
   }
 }
@@ -50,7 +50,7 @@ body {
 
 .contact__item-label {
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .contact__item-input {
@@ -58,11 +58,13 @@ body {
   height: 45px;
   margin-top: 5px;
   border-radius: 5px;
+  font-size: 15px;
 }
 
 .contact__item-input-message {
   margin-top: 5px;
   border-radius: 5px;
+  font-size: 15px;
 }
 
 .button-contact {

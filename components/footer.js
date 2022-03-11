@@ -3,10 +3,12 @@ function footer(el) {
 
   componentEl.innerHTML = `
     <footer class="footer">
-        <img src="images/logositio.png" alt="" class="footer__logo" />
+    <a href="./index.html">
+    <img src="images/logositio.png" alt="" class="footer__logo" />
+    </a>
         <div class="footer-socialmedia__container">
           <div class="footer-socialmedia">
-            <span class="footer-socialmedia__span">Instagram</span>
+            <a href="./index.html" class="footer-socialmedia__span">Instagram</a>
             <img
               src="images/instagram.png"
               alt=""
@@ -14,7 +16,7 @@ function footer(el) {
             />
           </div>
           <div class="footer-socialmedia">
-            <span class="footer-socialmedia__span">Linkedin</span>
+            <a href="./index.html" class="footer-socialmedia__span">Linkedin</a>
             <img
               src="images/linkedin.png"
               alt=""
@@ -22,7 +24,7 @@ function footer(el) {
             />
           </div>
           <div class="footer-socialmedia">
-            <span class="footer-socialmedia__span">Github</span>
+            <a href="./index.html" class="footer-socialmedia__span">Github</a>
             <img
               src="images/github.png"
               alt=""
@@ -35,4 +37,3 @@ function footer(el) {
 
   el.appendChild(componentEl);
 }
-footer();

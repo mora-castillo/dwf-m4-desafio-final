@@ -19,13 +19,6 @@
   width: 100px;
 }
 
-.footer-socialmedia__container {
-}
-@media (min-width: 960px) {
-  .footer-socialmedia__container {
-  }
-}
-
 .footer-socialmedia {
   display: flex;
   flex-direction: row;
@@ -41,6 +34,9 @@
 }
 
 .footer-socialmedia__span {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .footer-socialmedia__logo {

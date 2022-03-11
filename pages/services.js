@@ -1,22 +1,21 @@
-function addPortfolioItem(params = {}) {
-  const template = document.querySelector("#portfolio__item-template");
-  const container = document.querySelector(".portfolio__item-container");
+function addServiceItem(params = {}) {
+  const template = document.querySelector("#services__item-template");
+  const container = document.querySelector(".services__item-container");
 
-  template.content.querySelector(".portfolio__item-img").src = params.img;
-  template.content.querySelector(".portfolio__item-title").textContent =
+  template.content.querySelector(".services__item-img").src = params.img;
+  template.content.querySelector(".services__item-title").textContent =
     params.title;
-  template.content.querySelector(".portfolio__item-description").textContent =
+  template.content.querySelector(".services__item-description").textContent =
     params.description;
-  template.content.querySelector(".portfolio__item-link").href = params.url;
 
   const clone = document.importNode(template.content, true);
 
   container.appendChild(clone);
 }
 
-function getPortfolioItem() {
+function getServiceItem() {
   return fetch(
-    " https://cdn.contentful.com/spaces/bgneoaj9i7le/environments/master/entries?access_token=pCz_CFq21uHmg-6wU6NkCOhwGUMymsvG_27NxBBiR5o&&content_type=m4FinalPortfolio"
+    " https://cdn.contentful.com/spaces/bgneoaj9i7le/environments/master/entries?access_token=pCz_CFq21uHmg-6wU6NkCOhwGUMymsvG_27NxBBiR5o&&content_type=m4FinalServices"
   )
     .then((res) => {
       return res.json();
@@ -29,7 +28,6 @@ function getPortfolioItem() {
           img: img.fields.file.url,
           title: item.fields.title,
           description: item.fields.description,
-          url: item.fields.url,
         };
       });
 
@@ -42,17 +40,17 @@ function getPortfolioItem() {
     });
 }
 
-function portfolio() {
+function services() {
   const headerCont = document.querySelector(".header__container");
   header(headerCont);
 
   const footerCont = document.querySelector(".footer__container");
   footer(footerCont);
 
-  getPortfolioItem().then((item) => {
+  getServiceItem().then((item) => {
     for (const i of item) {
-      addPortfolioItem(i);
+      addServiceItem(i);
     }
   });
 }
-portfolio();
+services();
